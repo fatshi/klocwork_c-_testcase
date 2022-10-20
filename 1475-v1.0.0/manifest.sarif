@@ -1,0 +1,96 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 1475,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "candidate",
+        "submissionDate": "2006-02-22",
+        "language": "c",
+        "author": "Klocwork",
+        "description": "Attempt to double free memory.",
+        "state": "bad"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/useafterfree_005.c"
+          },
+          "length": 1934,
+          "sourceLanguage": "c",
+          "hashes": {
+            "sha-256": "6b8b75c0acd2c387b3e3468ef008f0ab164b042333a5c3c9ce84615a6e9b0d4e"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "416",
+              "name": "Use After Free"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-416",
+          "message": {
+            "text": "Use After Free."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/useafterfree_005.c",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 31
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "416",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

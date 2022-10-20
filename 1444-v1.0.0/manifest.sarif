@@ -1,0 +1,96 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 1444,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "candidate",
+        "submissionDate": "2006-02-17",
+        "language": "c",
+        "author": "Klocwork",
+        "description": "Attempted free of memory which has not been allocated.",
+        "state": "bad"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/badfree_007.c"
+          },
+          "length": 1881,
+          "sourceLanguage": "c",
+          "hashes": {
+            "sha-256": "a6ae1c9279edbfb5832564deefff13583cc126c9cef1b9c21c58993700dfcc8b"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "590",
+              "name": "Free of Memory not on the Heap"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-590",
+          "message": {
+            "text": "Free of Memory not on the Heap."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/badfree_007.c",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 31
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "590",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
